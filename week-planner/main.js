@@ -14,7 +14,7 @@ var daybutton = document.querySelectorAll('.day-button');
 var $tablerow = document.querySelectorAll('.table-row');
 
 document.addEventListener('click', function (event) {
-  console.log(event.target);
+  // console.log(event.target);
   if (event.target.className === 'add-entry') {
     background.classList.remove('hidden');
   }
@@ -22,8 +22,9 @@ document.addEventListener('click', function (event) {
     for (var i = 0; i < daybutton.length; i++) {
       if (event.target === daybutton[i]) {
         for (var j = 0; j < data[i].entries.length; j++) {
-          $tablerow[j].firstChild.textContent = data[i].entries[j].time;
-          $tablerow[j].lastChild.textContent = data[i].entries[j].description;
+          $tablerow[j].textContent = data[i].entries[j].time;
+          console.log($tablerow);
+          // $tablerow[j].textContent = data[i].entries[j].description;
         }
       }
     }
