@@ -16,14 +16,36 @@
     <div class="row">
       <button class="add-entry" type="submit">Add Entry</button>
     </div>
-    <div class="background hidden">
+    <div class="background">
     </div>
     <div class="modal">
       <h2>Add Entry</h2>
       <form>
-        <select name="dropdown" id=''
-
+        <label for="day">
+          <select name="day" id='day'>
+            <option value="sunday">Sunday</option>
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+            <option value="saturday">Saturday</option>
+          </select>
+        <label for="time">
+          <select name="time" id='time'>
+              <option value="nine">9:00 AM</option>
+              <option value="ten">10:00 AM</option>
+              <option value="eleven">11:00 AM</option>
+              <option value="twelve">12:00 PM</option>
+              <option value="onePm">1:00 PM</option>
+              <option value="twoPm">2:00 PM</option>
+              <option value="threePm">3:00 PM</option>
+              <option value="fourPm">4:00 PM</option>
+              <option value="fivePm">5:00 PM</option>
+          </select>
+        </label>
       </form>
+    </label>
     </div>
   </div>
   <script src="main.js"></script>
