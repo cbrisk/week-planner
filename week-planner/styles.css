@@ -5,7 +5,6 @@
 body {
   margin: 0 auto;
   width: 1200px;
-
 }
 
 textarea {
@@ -29,11 +28,9 @@ textarea {
   border-radius: 5px;
 }
 .add-entry:hover,
-.submit:hover {
+.submit:hover, .day-button:hover {
   cursor: pointer;
 }
-
-
 
 .background {
   position: fixed;
@@ -70,18 +67,25 @@ textarea {
 .row-days {
   justify-content: space-around;
   padding: 1rem;
-
 }
 
 .day-button {
   padding: 1rem;
 }
- tbody tr:nth-child(odd) {
-   background-color: darkgrey;
- }
+tbody tr:nth-child(odd) {
+  background-color: darkgrey;
+}
 table {
   width: 100%;
+  border-spacing: 0px;
+  border: 1px solid;
 }
 tr {
   height: 1.5rem;
+}
+td, th{
+  padding: 0px;
+}
+.border{
+  border-right: 1px solid black;
 }
