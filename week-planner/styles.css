@@ -76,3 +76,12 @@ textarea {
 .day-button {
   padding: 1rem;
 }
+ tbody tr:nth-child(odd) {
+   background-color: darkgrey;
+ }
+table {
+  width: 100%;
+}
+tr {
+  height: 1.5rem;
+}
