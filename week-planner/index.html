@@ -12,12 +12,24 @@
       <div class="row">
         <h1>Weekly Planner</h1>
       </div>
+      <div class="row row-days">
+        <button id="sunday" class="day-button">Sunday</button>
+        <button id="monday"  class="day-button">Monday</button>
+        <button id="tuesday"  class="day-button">Tuesday</button>
+        <button id="wednesday"  class="day-button">Wednesday</button>
+        <button id="thursday"  class="day-button">Thursday</button>
+        <button id="friday"  class="day-button">Friday</button>
+        <button id="saturday"  class="day-button">Saturday</button>
+      </div>
       <div class="row">
         <button class="add-entry" type="submit">Add Entry</button>
       </div>
       <div class="background hidden">
         <div class="modal">
           <h2>Add Entry</h2>
+          <div>
+            <h2>Scheduled Events for Monday</h2>
+          </div>
           <form>
             <select name="day" id="day">
               <option disabled selected>Day of Week</option>
@@ -42,7 +54,7 @@
               <option value="fivePm">5:00 PM</option>
             </select>
             <div>
-              <textarea placeholder="description" required></textarea>
+              <textarea name="description" placeholder="description" required></textarea>
             </div>
             <div class="btn-container">
               <button class="submit" type="submit">Submit</button>

@@ -5,7 +5,7 @@ var data = {
   wednesday: [],
   thursday: [],
   friday: [],
-  saturday: []
+  saturday: [],
 }
 
 var modal = document.querySelector('.add-entry');
@@ -20,5 +20,9 @@ document.addEventListener('click', function (event) {
 var form = document.querySelector('form');
 
 form.addEventListener('submit', function(event) {
-  form.elements.
+  event.preventDefault()
+  var day  = form.elements.day.value
+  data[day].push({time: form.elements.time.value, description: form.elements.description.value})
+  background.classList.add('hidden');
+  form.reset()
 })

@@ -4,6 +4,8 @@
 
 body {
   margin: 0 auto;
+  width: 1200px;
+
 }
 
 textarea {
@@ -63,4 +65,14 @@ textarea {
 
 .hidden {
   display: none;
+}
+
+.row-days {
+  justify-content: space-around;
+  padding: 1rem;
+
+}
+
+.day-button {
+  padding: 1rem;
 }
