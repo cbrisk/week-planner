@@ -30,9 +30,8 @@ textarea {
 .submit:hover {
   cursor: pointer;
 }
-.hidden {
-  display: none;
-}
+
+
 
 .background {
   position: fixed;
@@ -60,4 +59,8 @@ textarea {
 .btn-container {
   display: flex;
   justify-content: flex-end;
+}
+
+.hidden {
+  display: none;
 }
