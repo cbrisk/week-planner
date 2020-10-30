@@ -11,6 +11,7 @@ var data = [
 var modal = document.querySelector('.add-entry');
 var background = document.querySelector('.background');
 var daybutton = document.querySelectorAll('.day-button');
+var $tablerow = document.querySelectorAll('.table-row');
 
 document.addEventListener('click', function (event) {
   console.log(event.target);
@@ -19,9 +20,11 @@ document.addEventListener('click', function (event) {
   }
   if (event.target.className === 'day-button') {
     for (var i = 0; i < daybutton.length; i++) {
-      console.log(i)
       if (event.target === daybutton[i]) {
-
+        for (var j = 0; j < data[i].entries.length; j++) {
+          $tablerow[j].firstChild.textContent = data[i].entries[j].time;
+          $tablerow[j].lastChild.textContent = data[i].entries[j].description;
+        }
       }
     }
   }
