@@ -5,14 +5,15 @@ var data = [
   { day: 'wednesday', entries: [] },
   { day: 'thursday', entries: [] },
   { day: 'friday', entries: [] },
-  { day: 'saturday', entries: [] },
+  { day: 'saturday', entries: [] }
 ];
 
 var modal = document.querySelector('.add-entry');
 var background = document.querySelector('.background');
 var daybutton = document.querySelectorAll('.day-button');
 var $tablerow = document.querySelectorAll('.table-row');
-
+console.log($tablerow[0]);
+console.log($tablerow[0].firstElementChild);
 document.addEventListener('click', function (event) {
   // console.log(event.target);
   if (event.target.className === 'add-entry') {
@@ -22,8 +23,8 @@ document.addEventListener('click', function (event) {
     for (var i = 0; i < daybutton.length; i++) {
       if (event.target === daybutton[i]) {
         for (var j = 0; j < data[i].entries.length; j++) {
-          $tablerow[j].textContent = data[i].entries[j].time;
-          console.log($tablerow);
+
+          $tablerow[0].firstElementChild.textContent = data[i].entries[j].time;
           // $tablerow[j].textContent = data[i].entries[j].description;
         }
       }
@@ -42,7 +43,7 @@ form.addEventListener('submit', function (event) {
       data[i].entries.push({
         time: form.elements.time.value,
         description: form.elements.description.value
-      })
+      });
     }
   }
 
