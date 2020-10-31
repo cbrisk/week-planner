@@ -23,15 +23,15 @@ document.addEventListener('click', function (event) {
     for (var i = 0; i < daybutton.length; i++) {
       if (event.target === daybutton[i]) {
         for (var j = 0; j < data[i].entries.length; j++) {
-
-          $tablerow[0].firstElementChild.textContent = data[i].entries[j].time;
-          // $tablerow[j].textContent = data[i].entries[j].description;
+          $header.textContent = 'Scheduled for day of ' + event.target.textContent
+          $tablerow[j].children[0].textContent = data[i].entries[j].time;
+          $tablerow[j].children[1].textContent = data[i].entries[j].description;
         }
       }
     }
   }
 });
-
+var $header = document.querySelector('.header')
 var form = document.querySelector('form');
 
 form.addEventListener('submit', function (event) {
