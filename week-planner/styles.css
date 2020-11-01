@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body {
@@ -19,6 +20,14 @@ textarea {
   justify-content: center;
 }
 
+.day-button {
+  padding: 1.6rem;
+}
+
+.add-entry {
+  margin: 2.5rem 0;
+}
+
 .add-entry,
 .submit {
   background-color: blue;
@@ -27,8 +36,10 @@ textarea {
   border: none;
   border-radius: 5px;
 }
+
 .add-entry:hover,
-.submit:hover, .day-button:hover {
+.submit:hover,
+.day-button:hover {
   cursor: pointer;
 }
 
@@ -69,23 +80,45 @@ textarea {
   padding: 1rem;
 }
 
-.day-button {
-  padding: 1rem;
-}
-tbody tr:nth-child(odd) {
-  background-color: darkgrey;
-}
 table {
   width: 100%;
-  border-spacing: 0px;
+  border-spacing: 0;
   border: 1px solid;
 }
+
 tr {
   height: 1.5rem;
 }
-td, th{
-  padding: 0px;
+
+td,
+th {
+  padding: 0;
 }
-.border{
+
+tbody tr:nth-child(odd) {
+  background-color: darkgrey;
+}
+
+.border {
   border-right: 1px solid black;
+}
+
+.narrow {
+  width: 12px;
+}
+
+.update,
+.delete {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.update {
+  background-color: blue;
+}
+
+.delete {
+  background-color: red;
 }
