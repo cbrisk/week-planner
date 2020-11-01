@@ -38,6 +38,8 @@ document.addEventListener('click', function (event) {
         for (var l = 0; l < $tablerow.length; l++) {
           $tablerow[l].children[0].textContent = '';
           $tablerow[l].children[1].textContent = '';
+          $tablerow[l].removeChild($update);
+          $tablerow[l].removeChild($delete);
         }
         for (var j = 0; j < data[i].entries.length; j++) {
           $tablerow[j].children[0].textContent = data[i].entries[j].time;
@@ -67,6 +69,12 @@ form.addEventListener('submit', function (event) {
   background.classList.add('hidden');
   form.reset();
   $header.textContent = 'Scheduled for day of Monday';
+  for (var l = 0; l < $tablerow.length; l++) {
+    $tablerow[l].children[0].textContent = '';
+    $tablerow[l].children[1].textContent = '';
+    $tablerow[l].removeChild($update);
+    $tablerow[l].removeChild($delete);
+  }
   for (var k = 0; k < data[1].entries.length; k++) {
     $tablerow[k].children[0].textContent = data[1].entries[k].time;
     $tablerow[k].children[1].textContent = data[1].entries[k].description;
